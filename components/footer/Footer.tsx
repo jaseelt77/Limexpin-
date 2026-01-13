@@ -37,13 +37,13 @@ export default function Footer() {
               Building exceptional digital experiences with modern technology and creative design.
             </p>
             <div className="flex gap-3 pt-2">
-              <a href="#" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
                 <Linkedin size={18} className="text-brand-accent" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
                 <Twitter size={18} className="text-brand-accent" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
                 <Github size={18} className="text-brand-accent" />
               </a>
             </div>
@@ -53,10 +53,10 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-brand-accent">Product</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Features</a></li>
-              <li><a href="#" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Pricing</a></li>
-              <li><a href="#" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Security</a></li>
-              <li><a href="#" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Roadmap</a></li>
+              <li><a href="/services" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Features</a></li>
+              <li><a href="/services" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Pricing</a></li>
+              <li><a href="/services" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Security</a></li>
+              <li><a href="/blog" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Roadmap</a></li>
             </ul>
           </div>
 
@@ -64,10 +64,10 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-brand-accent">Company</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">About</a></li>
-              <li><a href="#" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Blog</a></li>
-              <li><a href="#" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Careers</a></li>
-              <li><a href="#" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Contact</a></li>
+              <li><a href="/about" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">About</a></li>
+              <li><a href="/blog" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Blog</a></li>
+              <li><a href="/work" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Careers</a></li>
+              <li><a href="/contact" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Contact</a></li>
             </ul>
           </div>
 
@@ -103,9 +103,9 @@ export default function Footer() {
           </div>
           
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Terms of Service</a>
-            <a href="#" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Cookies</a>
+            <a href="/privacy" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Privacy Policy</a>
+            <a href="/terms" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Terms of Service</a>
+            <a href="/cookies" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Cookies</a>
           </div>
 
           {/* Scroll to Top */}

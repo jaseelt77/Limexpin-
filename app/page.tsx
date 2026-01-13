@@ -1,9 +1,18 @@
-
+import VideoBanner from "@/components/videoBanner/VideoBanner";
+import  styles from 'components/videoBanner/VideoBanner.module.scss';
 
 export default function Home() {
   return (
-   <div className="flex justify-center items-center h-screen bg-blue-500 text-white ">
-      <h1 className="text-4xl font-bold">A Digital Product Studio that will Work</h1>
-    </div>
+    <section>
+      <VideoBanner
+        videoSrc="/video/intro.mp4"
+        poster="/images/limeBanner.jpeg"
+        title="A Digital Product Studio That Works"
+        description="We design and build digital products that help businesses grow."
+        ctaText="Get Started"
+        ctaLink="/contact"
+        variant="full"
+      />
+    </section>
   );
 }
