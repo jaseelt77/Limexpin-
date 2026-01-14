@@ -31,6 +31,20 @@ module.exports = {
         h3: ["28px", { lineHeight: "36px", fontWeight: "600" }],
         h4: ["22px", { lineHeight: "30px", fontWeight: "600" }],
       },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        marqueeReverse: {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 20s linear infinite',
+        marqueeReverse: 'marqueeReverse 20s linear infinite',
+      },
 
       fontFamily: {
         sans: ["var(--font-barlow)", "system-ui", "sans-serif"],
@@ -40,3 +54,4 @@ module.exports = {
 
   plugins: [],
 };
+module.exports = config;
