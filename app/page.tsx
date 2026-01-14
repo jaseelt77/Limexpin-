@@ -3,7 +3,7 @@ import  styles from 'components/videoBanner/VideoBanner.module.scss';
 
 export default function Home() {
   return (
-    <section>
+    <section className="relative w-full overflow-hidden">
       <VideoBanner
         videoSrc="/video/intro.mp4"
         poster="/images/limeBanner.jpeg"
@@ -12,6 +12,7 @@ export default function Home() {
         ctaText="Get Started"
         ctaLink="/contact"
         variant="full"
+
       />
     </section>
   );

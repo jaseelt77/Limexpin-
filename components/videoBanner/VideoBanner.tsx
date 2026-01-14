@@ -44,9 +44,10 @@ export default function VideoBanner({
                 <h1 className={styles.title}>{title}</h1>
                 {description && <p className={styles.description}>{description}</p>}
                 {ctaText && ctaLink && (
-                    <Link href={ctaLink} className={styles.cta}>
+                    <Link href={ctaLink} className="inline-flex text-brand-text-bg px-3 py-3 rounded-[6px] bg-brand-accent font-normal hover:bg-brand-accent/50 transition">
                         {ctaText}
                     </Link>
+                    
                 )}
             </div>
         </section>

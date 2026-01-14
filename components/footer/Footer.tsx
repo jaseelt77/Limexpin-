@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Linkedin, Twitter, Github, ArrowUp } from 'lucide-react';
+import Link from 'next/link';
 
 
 export default function Footer() {
@@ -29,63 +30,63 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-brand-accent rounded-lg flex items-center justify-center">
-                <span className="text-brand-textBg font-bold text-sm">.</span>
+                <span className="text-black font-bold text-sm">LI</span>
               </div>
-              <span className="text-xl font-bold text-brand-accent">Limexpin</span>
+              <span className="text-xl font-bold text-black">Limexpin</span>
             </div>
-            <p className="text-brand-text/80 text-sm leading-relaxed">
+            <p className="text-black/60 text-sm leading-relaxed">
               Building exceptional digital experiences with modern technology and creative design.
             </p>
             <div className="flex gap-3 pt-2">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
-                <Linkedin size={18} className="text-brand-accent" />
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-sm bg-brand-textBg hover:bg-brand-accent/60 hover:text-black transition-colors duration-200 font-medium text-sm">
+                <Linkedin size={18} className="text-black/60" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
-                <Twitter size={18} className="text-brand-accent" />
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-sm bg-brand-textBg hover:bg-brand-accent/60 hover:text-black transition-colors duration-200 font-medium text-sm">
+                <Twitter size={18} className="text-black/60" />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-brand-textBg hover:bg-brand-accent/20 transition-colors duration-200">
-                <Github size={18} className="text-brand-accent" />
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-sm hover:bg-brand-accent/60 hover:text-black transition-colors duration-200 font-medium text-sm">
+                <Github size={18} className="text-black/60" />
               </a>
             </div>
           </div>
 
           {/* Product Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-brand-accent">Product</h3>
+            <h3 className="font-semibold text-black">Product</h3>
             <ul className="space-y-3">
-              <li><a href="/services" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Features</a></li>
-              <li><a href="/services" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Pricing</a></li>
-              <li><a href="/services" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Security</a></li>
-              <li><a href="/blog" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Roadmap</a></li>
+              <li><a href="/services" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Features</a></li>
+              <li><a href="/services" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Pricing</a></li>
+              <li><a href="/services" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Security</a></li>
+              <li><a href="/blog" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Roadmap</a></li>
             </ul>
           </div>
 
           {/* Company Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-brand-accent">Company</h3>
+            <h3 className="font-semibold text-black">Company</h3>
             <ul className="space-y-3">
-              <li><a href="/about" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">About</a></li>
-              <li><a href="/blog" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Blog</a></li>
-              <li><a href="/work" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Careers</a></li>
-              <li><a href="/contact" className="text-brand-text/80 hover:text-brand-accent transition-colors duration-200">Contact</a></li>
+              <li><Link href="/about" className="text-black/60 hover:text-brand-primary  transition-colors duration-200">About</Link></li>
+              <li><Link href="/blog" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Blog</Link></li>
+              <li><Link href="/work" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Careers</Link></li>
+              <li><Link href="/contact" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-brand-accent">Stay Updated</h3>
-            <p className="text-brand-text/80 text-sm">Subscribe to get the latest updates and news.</p>
+            <h3 className="font-semibold text-black">Stay Updated</h3>
+            <p className="text-black/60 text-sm">Subscribe to get the latest updates and news.</p>
             <div className="flex gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
-                className="flex-1 px-3 py-2 bg-brand-textBg/50 border border-brand-text/20 rounded-lg text-brand-text placeholder-brand-text/50 focus:outline-none focus:border-brand-accent transition-colors duration-200"
+                className="flex-1 px-3 py-2 bg-brand-textBg/50 border text-black/60 rounded-lg text-black/60 placeholder-black/40 focus:outline-none focus:border-text-black/60 transition-colors duration-200"
               />
               <button 
                 onClick={handleSubscribe}
-                className="px-3 py-2 bg-brand-accent text-brand-textBg rounded-lg hover:bg-brand-accent/90 transition-colors duration-200 font-medium text-sm"
+                className="px-3 py-2 bg-brand-primary text-brand-textBg rounded-lg hover:bg-brand-accent/60 hover:text-black transition-colors duration-200 font-medium text-sm"
               >
                 <Mail size={18} />
               </button>
@@ -98,23 +99,23 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-brand-text/60 text-sm">
+          <div className="text-black/60 text-sm">
             <p>&copy; {currentYear} App. All rights reserved.</p>
           </div>
           
           <div className="flex gap-6 text-sm">
-            <a href="/privacy" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Privacy Policy</a>
-            <a href="/terms" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Terms of Service</a>
-            <a href="/cookies" className="text-brand-text/60 hover:text-brand-accent transition-colors duration-200">Cookies</a>
+            <Link href="/privacy" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Privacy Policy</Link>
+            <Link href="/terms" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Terms of Service</Link>
+            <Link href="/cookies" className="text-black/60 hover:text-brand-primary transition-colors duration-200">Cookies</Link>
           </div>
 
           {/* Scroll to Top */}
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-lg bg-brand-accent/20 hover:bg-brand-accent/40 transition-colors duration-200"
+            className="p-2 rounded-lg bg-brand-accent  hover:bg-brand-accent/60 transition-colors duration-200"
             aria-label="Scroll to top"
           >
-            <ArrowUp size={18} className="text-brand-accent" />
+            <ArrowUp size={18} className="text-brand-text-bg" />
           </button>
         </div>
       </div>

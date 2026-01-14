@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.scss";
@@ -11,22 +11,30 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Work", href: "/work" },
   {  label: "Careers", href: "/carees" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
   const isActive  = (href : string) => href === "/" ? pathname === "/" : pathname.startsWith(href);
 // const isActive = (href: string) => {
 //   return pathname === href;
 // };
+useEffect(() => {
+  const onScroll = () => setScrolled(window.scrollY > 60);
+  window.addEventListener("scroll", onScroll);
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
   return (
-    <header className={`w-full sticky top-0 z-50 ${styles.header}`}>
-      <div className="container mx-auto flex items-center justify-between py-2 md:py-0 h-[60px] md:h-[100px] ">
+    // <header className={`w-full sticky top-0 z-50 ${styles.header}`}>
+    <header  className={`sticky top-0 z-50 w-full transition-all duration-300
+        ${styles.header}
+        ${scrolled ? styles.scrolled : styles.top}`}>
+      <div className="container mx-auto flex items-center justify-between py-2 md:py-0 px-4 h-[60px] md:h-[100px] ">
         {/* Logo */}
-        <Link href="/" className="text-xl font-display font-bold">
-          Limexpin<span className="text-accent-500">.</span>
+        <Link href="/" className="text-xl text-brand-text font-display font-bold">
+          LIMEXPIN<span className="text-accent-500"></span>
         </Link>
 
         {/* Desktop Nav */}
@@ -35,10 +43,10 @@ export default function Header() {
             <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-2 py-2.5 rounded-lg text-base transition-colors duration-200
+                className={`block px-2 py-2.5 rounded-[6px] text-base transition-colors duration-200 hover:bg-brand-accent hover:text-brand-text-bg
                 ${
                     isActive(link.href)
-                    ? "bg-brand-textBg text-brand-textBg"
+                    ? "text-brand-accent bg-brand-accent/20"
                     : "text-brand-text hover:text-brand-text hover:bg-brand-textBg"
                 }
                 `}
@@ -51,7 +59,7 @@ export default function Header() {
 
         <Link
             href="/contact"
-            className="hidden md:flex px-5 py-2.5 rounded-xl bg-accent-500 text-black font-semibold hover:bg-accent-600 transition"
+            className="hidden md:flex px-5 py-2.5 rounded-[6px] bg-brand-accent text-brand-black font-normal hover:bg-brand-accent/50 transition"
           >
            Contact Us
           </Link> 
@@ -83,7 +91,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="mt-4 w-full text-center px-6 py-3 rounded-xl bg-accent-500 text-black font-semibold"
+              className="hidden md:flex px-5 py-2.5 rounded-[6px] bg-brand-accent text-brand-black font-normal hover:bg-brand-accent/50 transition"
           >
             Contact Us
           </Link>

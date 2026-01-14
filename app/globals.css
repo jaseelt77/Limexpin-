@@ -29,3 +29,18 @@ body {
   --font-h2: 36px;
   --font-body: 16px;
 }
+
+@theme {
+  --color-brand-text: #e6e6e6;
+  --color-brand-primary: #2563eb;
+  --color-brand-accent: #9eff00;
+  --color-brand-text-bg: #262626;
+
+  --font-sans: var(--font-barlow), system-ui, sans-serif;
+
+  --text-h1: 48px;
+  --leading-h1: 56px;
+
+  --text-h2: 36px;
+  --leading-h2: 44px;
+}

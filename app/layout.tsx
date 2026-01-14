@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import {  Barlow } from "next/font/google";
-import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/footer/Footer";
+import "./globals.css";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={barlow.variable}>
-      <body>
+      <body className="relative">
         <Header  />
         {children}
         <Footer />

@@ -1,7 +1,7 @@
 /* Variables */
 $overlay-color: rgba(0, 0, 0, 0.45);
-$primary : #4f46e5;
-$primary-hover : #4338ca;
+$primary : #5af73e;
+$primary-hover : #65c108;
 
 @keyframes fadeUp {
     from {
@@ -27,11 +27,11 @@ $primary-hover : #4338ca;
 
 /* Height variants */
 .videoBanner--full {
-    height: 80vh;
+    height: 90vh;
     min-height: 480px;
 }
 .videoBanner--short {
-    height: 55vh;
+    height: 65vh;
     min-height: 360px;
 }
 .video {
@@ -69,18 +69,18 @@ object-fit: cover;
 }
 
 /* Button styles */
-.cta{
-    display: inline-block;
-    padding: 0.75rem 1.75rem;
-    border-radius: 8px;
-    background: $primary;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+// .cta{
+//     display: inline-block;
+//     padding: 0.75rem 1.75rem;
+//     border-radius: 8px;
+//     background: $primary;
+//     color: #fff;
+//     font-weight: 600;
+//     text-decoration: none;
+//     transition: background 0.2s ease, transform 0.2s ease;
 
-    &:hover{
-        background: $primary-hover;
-        transform: translateY(-2px);
-    }
-}
+//     &:hover{
+//         background: $primary-hover;
+//         transform: translateY(-2px);
+//     }
+// }
